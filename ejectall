@@ -1,14 +1,11 @@
 #!/bin/bash
 
-diskutil list >> /Users/$USER/Automation/eject/diskUtilOutput
-numDisks=`cat diskUtilOutput | grep -c "dev/disk"`
-((foundDisks=$numDisks-2))
-((numDisks=$numDisks-1))
+numDisks=`diskutil list physical | grep -c "dev/disk"`
 
-if [[ $foundDisks -gt "1" ]]; then
-  echo -ne $foundDisks 'Ejectable disks located \n'
-elif [[ $foundDisks -eq 1 ]]; then
-  echo -ne $foundDisks 'Ejectable disk located \n'
+if [[ $numDisks -gt 2 ]]; then
+  echo -ne $numDisks 'Ejectable disks located \n'
+elif [[ $numDisks -eq 2 ]]; then
+  echo -ne $numDisks 'Ejectable disk located \n'
 fi
 
 firstPass="true"
@@ -27,4 +24,3 @@ if [[ $firstPass = "true" ]]; then
 else
   echo 'Complete'
 fi
-rm /Users/$USER/Automation/eject/diskUtilOutput
