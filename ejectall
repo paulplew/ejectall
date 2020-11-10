@@ -1,6 +1,5 @@
 #!/bin/bash
 
-rm /Users/$USER/Automation/eject/diskUtilOutput
 diskutil list >> /Users/$USER/Automation/eject/diskUtilOutput
 numDisks=$(Java /Users/$USER/Automation/eject/getDisks.java)
 ((foundDisks=$numDisks-2))
@@ -28,3 +27,4 @@ if [[ $firstPass = "true" ]]; then
 else
   echo 'Complete.'
 fi
+rm diskUtilOutput
