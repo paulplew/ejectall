@@ -6,7 +6,9 @@ import java.util.Scanner;
 // sends the name of a file and searchString to parseDisks(String String)
 public class getDisks {
   public static void main(String[] args) throws FileNotFoundException{
-    System.out.println(parseDisks("/Users/$USER/Automation/eject/diskUtilOutput", "/dev/disk"));
+    String filePath = new String("/Users/paulplew/Automation/eject/diskutilOutput");
+    String searchArgs = new String("dev/disk");
+      System.out.println(parseDisks(filePath, searchArgs));
   }
 
 // A File is the name of a file that exists in the System
