@@ -1,7 +1,7 @@
 #!/bin/bash
 
 diskutil list >> /Users/$USER/Automation/eject/diskUtilOutput
-numDisks=$(Java /Users/$USER/Automation/eject/getDisks.java)
+numDisks=`cat diskUtilOutput | grep -c "dev/disk"`
 ((foundDisks=$numDisks-2))
 ((numDisks=$numDisks-1))
 
