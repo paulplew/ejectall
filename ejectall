@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 rm /Users/$USER/Automation/eject/diskUtilOutput
 diskutil list >> /Users/$USER/Automation/eject/diskUtilOutput
