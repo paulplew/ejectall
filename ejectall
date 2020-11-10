@@ -27,4 +27,4 @@ if [[ $firstPass = "true" ]]; then
 else
   echo 'Complete.'
 fi
-rm diskUtilOutput
+rm /Users/$USER/Automation/eject/diskUtilOutput
