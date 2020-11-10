@@ -1,0 +1,4 @@
+#!/bin/bash
+
+CURRENT=`pwd`
+export PATH=$PATH:$CURRENT
