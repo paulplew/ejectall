@@ -6,9 +6,9 @@ numDisks=`cat diskUtilOutput | grep -c "dev/disk"`
 ((numDisks=$numDisks-1))
 
 if [[ $foundDisks -gt "1" ]]; then
-  echo -ne $foundDisks 'Ejectable disks located. \n'
+  echo -ne $foundDisks 'Ejectable disks located \n'
 elif [[ $foundDisks -eq 1 ]]; then
-  echo -ne $foundDisks 'Ejectable disk located. \n'
+  echo -ne $foundDisks 'Ejectable disk located \n'
 fi
 
 firstPass="true"
@@ -17,14 +17,14 @@ while [[ $numDisks -gt 1 ]]; do
     echo 'done'
   fi
   firstPass="false"
-  diskutil eject /dev/disk$numDisks | echo -ne 'Ejecting ~/dev/disk'$numDisks'.\n'
+  diskutil eject /dev/disk$numDisks | echo -ne 'Ejecting ~/dev/disk'$numDisks'\n'
   echo -ne
   ((numDisks=$numDisks-1))
 done
 
 if [[ $firstPass = "true" ]]; then
-  echo 'No disks Detected.'
+  echo 'No disks Detected'
 else
-  echo 'Complete.'
+  echo 'Complete'
 fi
 rm /Users/$USER/Automation/eject/diskUtilOutput
