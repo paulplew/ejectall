@@ -1,11 +1,12 @@
 #!/bin/bash
 
 numDisks=`diskutil list physical | grep -c "dev/disk"`
+trueDisks=$(($numDisks-1))
 
 if [[ $numDisks -gt 2 ]]; then
-    echo -ne $numDisks-1 'Ejectable disks located \n'
+    echo "$trueDisks Ejectable disks located"
 elif [[ $numDisks -eq 2 ]]; then
-    echo -ne $numDisks-1 'Ejectable disk located \n'
+    echo "$trueDisks Ejectable disk located"
 fi
 
 firstPass="true"
