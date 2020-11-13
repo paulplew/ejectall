@@ -17,3 +17,6 @@ Complete
 
 2. Run the installation script :
 > sudo ./installer
+
+3. To eject your disks it's **EASY** :
+> ejectall
