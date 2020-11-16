@@ -1,7 +1,7 @@
 # ejectall-OSX
 
 Quick dirty Automation to be used in CLI that ejects all external drives.
-> Tested on 10.15.7 Catalina
+> Working on 10.15.7 and later 
 
 ### How to Install
 1. Clone the repo to where you want it :
@@ -16,12 +16,5 @@ sudo ./installer
 3. To eject your disks it's **EASY** :
 ```
 ejectall
-```
-### Sample Output
-
-```
-1 Ejectable disk located
-Ejecting ~/dev/disk2
-Complete
 ```
 
