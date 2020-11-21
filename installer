@@ -2,7 +2,7 @@
 
 if [ $EUID -ne 0 ]; then
     echo "$0 is not running at root. Try using sudo."
-   exit 2 
+    exit 2 
 fi
     
 echo `pwd` >> /etc/paths.d/Eject
