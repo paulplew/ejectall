@@ -8,12 +8,15 @@ Quick dirty Automation to be used in CLI that ejects all external drives.
 ```
 git clone https://github.com/venue-ex/ejectall-OSX
 ```
-
-2. Run the installation script :
+2. Move into the new directory :
 ```
-sudo ./installer
+cd ejectall-OSX
 ```
-3. To eject your disks it's **EASY** :
+3. Echo the path to your paths :
+```
+echo `pwd` >> /etc/paths.d/Eject
+```
+4. Eject your disks, its **EASY** :
 ```
 ejectall
 ```
