@@ -14,7 +14,7 @@ cd ejectall-OSX
 ```
 3. Echo the path to your paths :
 ```
-echo `pwd` >> /etc/paths.d/Eject
+sudo echo `pwd` >> /etc/paths.d/Eject
 ```
 4. Eject your disks, its **EASY** :
 ```
