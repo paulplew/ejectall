@@ -12,12 +12,12 @@ git clone https://github.com/venue-ex/ejectall-OSX
 ```
 cd ejectall-OSX
 ```
-3. Echo the path to your paths :
+3. Echo the path to your paths :  
+If you like the script, add this to your `.bashrc`.
 ```
-sudo echo `pwd` >> /etc/paths.d/Eject
+export PATH=`pwd`:$PATH
 ```
 4. Eject your disks, its **EASY** :
 ```
 ejectall
 ```
-
