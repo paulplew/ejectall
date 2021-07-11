@@ -1,4 +1,4 @@
-# ejectall-OSX
+# ejectall
 
 Quick dirty Automation to be used in CLI that ejects all external drives.
 > Working on 10.15.7 and later 
